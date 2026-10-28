@@ -13,5 +13,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
 
     Route::resource('dashboard', DashboardController::class);
     Route::resource('user', \App\Http\Controllers\UserController::class);
+    Route::get('/settings', [\App\Http\Controllers\SettingController::class, 'index'])->name('settings');
+    Route::post('/settings', [\App\Http\Controllers\SettingController::class, 'update'])->name('settings.update');
 
 });

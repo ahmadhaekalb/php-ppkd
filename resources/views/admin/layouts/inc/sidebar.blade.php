@@ -56,13 +56,13 @@
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="{{route('admin.user.index')}}" class="sidebar-menu-link" id="menu-loginpage" title="Login Page">
+            <a href="{{ route('admin.user.index')}}" class="sidebar-menu-link" id="menu-loginpage" title="Login Page">
               <i class="bi bi-people"></i>
               <span>User</span>
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="page-404.html" class="sidebar-menu-link" id="menu-404" title="404 Page">
+            <a href="{{ route('admin.settings') }}" class="sidebar-menu-link" id="menu-404" title="404 Page">
               <i class="bi bi-gear"></i>
               <span>Pengaturan</span>
             </a>
