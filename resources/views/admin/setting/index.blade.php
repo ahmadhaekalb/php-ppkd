@@ -47,6 +47,9 @@
                     <label for="" class="form-label">Logo Utama Website</label>
                     <input type="file" name="site_logo">
                 </div>
+                <div class="">
+                  <img src="{{ asset('storage/' . $setting['site_logo']->value) }}" alt="Site Log">
+                </div>
             </div>
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
                 <h5 class="fw-bold text-main mb-3">Kontak & Lokasi</h5>
@@ -64,7 +67,7 @@
                 </div>
                 <div class="mb-3">    
                     <label for="" class="form-label">Alamat</label>
-                    <textarea name="address" id="" cols="30" rows="10" class="form-control"></textarea>
+                    <textarea name="address" id="" cols="30" rows="10" class="form-control">{{old('email_order', optional($setting->get('email_order')) ->value)}}</textarea>
                 </div>
             </div>
 

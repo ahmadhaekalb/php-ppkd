@@ -12,7 +12,7 @@
         <div class="sidebar-menu-title">Menu</div>
         <ul class="sidebar-menu-list">
           <li class="sidebar-menu-item">
-            <a href="index.html" class="sidebar-menu-link" id="menu-overview" title="Overview">
+            <a href="{{ route('admin.category.index') }}" class="sidebar-menu-link" id="menu-overview" title="Overview">
               <i class="bi bi-grid-fill"></i>
               <span>Dashboard</span>
             </a>
@@ -52,7 +52,7 @@
           <li class="sidebar-menu-item">
             <a href="page-blank.html" class="sidebar-menu-link active" id="menu-blankpage" title="Blank Page">
               <i class="bi bi-file-earmark"></i>
-              <span>Blank Page</span>
+              <span>Kategori Produk</span>
             </a>
           </li>
           <li class="sidebar-menu-item">

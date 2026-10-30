@@ -61,9 +61,36 @@
         <!-- END: Page Header Banner -->
 
         <!-- START: Blank Page Content Area -->
+        @if (session('success'))
+            <div class="alert alert-success mb-3">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <strong>Success:</strong>{{ session('success') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+        @if (session('error'))
+            <div class="alert alert-warning mb-3">
+                <i class="bi bi-exclamation-circle-fill me-2"></i>
+                <strong>Error:</strong>{{ session('error') }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        @endif
+        @if ($errors->any())
+            <div class="alert alert-warning mb-3">
+                <i class="bi bi-exclamation-circle-fill me-2"></i>
+                <strong>Peringatan:</strong>
+                Terdapat beberapa kesalahan pengisian form:
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <div class="card p-4 border-light shadow-sm ">{{-- text-center --}}
             @yield('content')
-            {{-- <div>
+        </div>
+        {{-- <div>
         <div class="mb-4 text-lime empty-state-icon">
           <i class="bi bi-file-earmark-fill"></i>
         </div>
@@ -71,7 +98,7 @@
         <p class="text-muted-green mb-4">Use this blank page starter template to build custom dashboard views, tables,
           forms, or any modules required for your Spark Admin system.</p>
       </div> --}}
-        </div>
+
         <!-- END: Blank Page Content Area -->
 
 
@@ -109,7 +136,7 @@
     <script src="{{ asset('assets/libs/flatpickr/flatpickr.min.js') }}"></script>
 
     <!-- Local dashboard interactions controller -->
-    <script src="{{ asset('assets/js/dashboard.js')}}"></script>
+    <script src="{{ asset('assets/js/dashboard.js') }}"></script>
 </body>
 
 </html>
