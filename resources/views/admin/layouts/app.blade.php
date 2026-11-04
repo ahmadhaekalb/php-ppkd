@@ -21,6 +21,8 @@
 
     <!-- Main Design System & Custom Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+    {{--  QUILL --}}
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -137,6 +139,14 @@
 
     <!-- Local dashboard interactions controller -->
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+    {{-- QUILL --}}
+    <script>
+        const quill = new Quill('#editor', {
+            theme: 'snow'
+        });
+    </script>
 </body>
 
 </html>

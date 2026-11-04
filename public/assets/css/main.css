@@ -1,12 +1,12 @@
-/* 
+/*
 ========================================================================
    BOOTSTRAP 5 ADMIN TEMPLATE - SPARK ADMIN
    DESIGN SYSTEM & CUSTOM STYLESHEET
    Developed with premium UI/UX standards
 
    Template Name: Spark Admin
-   Version: 1.0 
-   Author: Spark Admin Team 
+   Version: 1.0
+   Author: Spark Admin Team
    Email: hello.sparkadmin@gmail.com
    URL: https://sparkadmin.web.id
 ========================================================================
@@ -52,24 +52,32 @@
 --------------------------------------------------------------------- */
 :root {
     /* Colors */
-    --bs-body-bg: #F4F6F5; /* Canvas background: light, warm grayish-green */
+    --bs-body-bg: #F4F6F5;
+    /* Canvas background: light, warm grayish-green */
     --bs-body-font-family: 'Plus Jakarta Sans', sans-serif;
-    
-    --brand-forest-dark: #051C12;     /* Core sidebar/brand background */
-    --brand-forest-medium: #072F1F;   /* Alert banner / dark card BG */
-    --brand-forest-light: #1A3E30;    /* Interactive elements in dark mode */
-    --brand-lime: #B4F105;            /* Lime-yellow accent highlight */
-    --brand-lime-hover: #c1f824;      
+
+    --brand-forest-dark: #051C12;
+    /* Core sidebar/brand background */
+    --brand-forest-medium: #072F1F;
+    /* Alert banner / dark card BG */
+    --brand-forest-light: #1A3E30;
+    /* Interactive elements in dark mode */
+    --brand-lime: #B4F105;
+    /* Lime-yellow accent highlight */
+    --brand-lime-hover: #c1f824;
     --brand-lime-translucent: rgba(180, 241, 5, 0.15);
-    
-    --text-main: #0B130F;             /* Dark headers, main labels */
-    --text-muted-green: #6C7E75;      /* Secondary labels, muted details */
-    --text-sidebar-muted: #879A91;    /* Sidebar inactive link labels */
-    
+
+    --text-main: #0B130F;
+    /* Dark headers, main labels */
+    --text-muted-green: #6C7E75;
+    /* Secondary labels, muted details */
+    --text-sidebar-muted: #879A91;
+    /* Sidebar inactive link labels */
+
     --card-background: #FFFFFF;
     --border-light: #E9EFEF;
     --border-dark-green: rgba(255, 255, 255, 0.1);
-    
+
     /* System Colors */
     --sys-green: #22C55E;
     --sys-green-bg: #DCFCE7;
@@ -77,18 +85,18 @@
     --sys-red-bg: #FEE2E2;
     --sys-orange: #F97316;
     --sys-orange-bg: #FFEDD5;
-    
+
     /* Layout Configurations */
     --sidebar-width: 280px;
     --navbar-height: 80px;
-    
+
     /* Border Radii */
     --radius-xxl: 24px;
     --radius-xl: 18px;
     --radius-lg: 14px;
     --radius-md: 10px;
     --radius-sm: 6px;
-    
+
     /* Box Shadows */
     --shadow-sm: 0 2px 8px rgba(11, 19, 15, 0.02);
     --shadow-md: 0 10px 30px rgba(11, 19, 15, 0.04);
@@ -108,7 +116,18 @@ body {
     letter-spacing: -0.01em;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
     color: var(--text-main);
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -119,6 +138,7 @@ a {
     text-decoration: none;
     transition: all 0.25s ease-in-out;
 }
+
 a:hover {
     color: var(--brand-lime-hover);
 }
@@ -127,13 +147,16 @@ a:hover {
     width: 6px;
     height: 6px;
 }
+
 ::-webkit-scrollbar-track {
     background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #CBD5E1;
     border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #94A3B8;
 }
@@ -230,13 +253,15 @@ a:hover {
 
 /* Active State & Hover States */
 .sidebar-menu-link:hover {
-    color: #FFFFFF;
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: #f8f9fa;
+    /* Warna latar belakang khas Bootstrap Light */
+    color: green;
+    /* Warna teks & ikon berubah menjadi biru Primary Bootstrap */
 }
 
 .sidebar-menu-link.active {
     color: #FFFFFF;
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.288);
     font-weight: 600;
 }
 
@@ -320,7 +345,8 @@ a:hover {
 
 .sidebar-profile-info {
     flex-grow: 1;
-    min-width: 0; /* allows text truncation */
+    min-width: 0;
+    /* allows text truncation */
 }
 
 .sidebar-profile-name {
@@ -633,6 +659,7 @@ body.sidebar-minimized .sidebar-profile {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -990,9 +1017,11 @@ body.sidebar-minimized .sidebar-profile {
     0% {
         box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.5);
     }
+
     70% {
         box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
     }
@@ -1211,7 +1240,8 @@ body.sidebar-minimized .sidebar-profile {
 
 /* Promo Banner Card */
 .promo-banner-card {
-    background-color: #E2E8DF; /* Soft light olive-sage */
+    background-color: #E2E8DF;
+    /* Soft light olive-sage */
     border-radius: var(--radius-xxl);
     padding: 1.75rem;
     position: relative;
@@ -1283,28 +1313,28 @@ body.sidebar-minimized .sidebar-profile {
     .sidebar-wrapper {
         transform: translateX(-100%);
     }
-    
+
     .sidebar-wrapper.show {
         transform: translateX(0);
         box-shadow: var(--shadow-lg);
     }
-    
+
     .main-wrapper {
         margin-left: 0;
         padding: 1.5rem 1.5rem;
     }
-    
+
     .sidebar-toggle-btn {
         display: flex;
     }
-    
+
     .navbar-search-wrapper {
         order: 3;
         max-width: 100%;
         width: 100%;
         margin-top: 0.5rem;
     }
-    
+
     .navbar-custom {
         display: flex !important;
         margin-top: -1.5rem;
@@ -1322,7 +1352,7 @@ body.sidebar-minimized .sidebar-profile {
         align-items: flex-start;
         gap: 1rem;
     }
-    
+
     .btn-date-picker {
         width: 100%;
         justify-content: center;
@@ -1626,8 +1656,13 @@ span.flatpickr-weekday {
 }
 
 @keyframes rotateLogo {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .footer-separator {
@@ -1649,8 +1684,15 @@ span.flatpickr-weekday {
 }
 
 @keyframes heartBeat {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
 
 .footer-right {
@@ -1696,9 +1738,11 @@ span.flatpickr-weekday {
     0% {
         box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
     }
+
     70% {
         box-shadow: 0 0 0 6px rgba(34, 197, 94, 0);
     }
+
     100% {
         box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
     }
@@ -1712,17 +1756,17 @@ span.flatpickr-weekday {
         margin-top: 1.5rem;
         gap: 1rem;
     }
-    
+
     .footer-left {
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
     }
-    
+
     .footer-separator {
         display: none;
     }
-    
+
     .footer-links {
         justify-content: center;
         flex-wrap: wrap;
@@ -1754,10 +1798,12 @@ span.flatpickr-weekday {
     pointer-events: none;
     z-index: 0;
 }
+
 .login-bg-shape-1 {
     top: -50px;
     left: -50px;
 }
+
 .login-bg-shape-2 {
     bottom: -100px;
     right: -50px;
@@ -1876,7 +1922,7 @@ span.flatpickr-weekday {
     box-shadow: 0 0 0 4px var(--brand-lime-translucent);
 }
 
-.login-input:focus + i.input-icon {
+.login-input:focus+i.input-icon {
     color: var(--brand-forest-medium);
 }
 
@@ -1936,7 +1982,8 @@ span.flatpickr-weekday {
 }
 
 .custom-checkbox-input:checked::before {
-    content: "\f272"; /* check icon in bootstrap-icons font */
+    content: "\f272";
+    /* check icon in bootstrap-icons font */
     font-family: "bootstrap-icons";
     font-weight: 900;
     font-size: 0.7rem;
@@ -2196,7 +2243,8 @@ span.flatpickr-weekday {
     border: 1px solid rgba(11, 19, 15, 0.06) !important;
     box-shadow: var(--shadow-sm);
     overflow: hidden;
-    margin-bottom: 1.25rem !important; /* Pushes the main footer down to create breathing space */
+    margin-bottom: 1.25rem !important;
+    /* Pushes the main footer down to create breathing space */
     width: 100%;
 }
 
@@ -2229,7 +2277,8 @@ span.flatpickr-weekday {
 }
 
 .table-custom tbody tr:hover {
-    background-color: rgba(180, 241, 5, 0.03); /* Soft brand-lime-glow transparent hover */
+    background-color: rgba(180, 241, 5, 0.03);
+    /* Soft brand-lime-glow transparent hover */
 }
 
 .table-custom tbody tr:last-child td {
@@ -2285,6 +2334,7 @@ span.flatpickr-weekday {
     background-color: rgba(34, 197, 94, 0.1);
     color: var(--sys-green);
 }
+
 .badge-table.success::before {
     background-color: var(--sys-green);
 }
@@ -2293,6 +2343,7 @@ span.flatpickr-weekday {
     background-color: rgba(249, 115, 22, 0.1);
     color: var(--sys-orange);
 }
+
 .badge-table.pending::before {
     background-color: var(--sys-orange);
 }
@@ -2301,6 +2352,7 @@ span.flatpickr-weekday {
     background-color: rgba(239, 68, 68, 0.1);
     color: var(--sys-red);
 }
+
 .badge-table.failed::before {
     background-color: var(--sys-red);
 }
@@ -3024,6 +3076,7 @@ span.flatpickr-weekday {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
@@ -3182,6 +3235,3 @@ span.flatpickr-weekday {
 .text-lime {
     color: var(--brand-lime) !important;
 }
-
-
-

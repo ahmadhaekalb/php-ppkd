@@ -12,7 +12,7 @@
         <div class="sidebar-menu-title">Menu</div>
         <ul class="sidebar-menu-list">
           <li class="sidebar-menu-item">
-            <a href="{{ route('admin.category.index') }}" class="sidebar-menu-link" id="menu-overview" title="Overview">
+            <a href="{{ route('admin.dashboard.index') }}" class="sidebar-menu-link {{ request()->routeIs('admin.dashboard.*') ? 'active' : '' }}" id="menu-overview" title="Overview">
               <i class="bi bi-grid-fill"></i>
               <span>Dashboard</span>
             </a>
@@ -21,7 +21,7 @@
       </div>
 
       <!-- Group: Components -->
-      <div class="sidebar-menu-section">
+      {{-- <div class="sidebar-menu-section">
         <div class="sidebar-menu-title">Components</div>
         <ul class="sidebar-menu-list">
           <li class="sidebar-menu-item">
@@ -43,26 +43,32 @@
             </a>
           </li>
         </ul>
-      </div>
+      </div> --}}
 
       <!-- Group: Pages -->
       <div class="sidebar-menu-section">
         <div class="sidebar-menu-title">Pages</div>
         <ul class="sidebar-menu-list">
           <li class="sidebar-menu-item">
-            <a href="page-blank.html" class="sidebar-menu-link active" id="menu-blankpage" title="Blank Page">
+            <a href="{{ route('admin.category.index')}}" class="sidebar-menu-link {{ request()->routeIs('admin.category.*') ? 'active' : '' }}" id="menu-blankpage" title="Blank Page">
               <i class="bi bi-file-earmark"></i>
               <span>Kategori Produk</span>
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="{{ route('admin.user.index')}}" class="sidebar-menu-link" id="menu-loginpage" title="Login Page">
+            <a href="{{ route('admin.user.index')}}" class="sidebar-menu-link {{ request()->routeIs('admin.user.*') ? 'active' : '' }}" id="menu-loginpage" title="Login Page">
               <i class="bi bi-people"></i>
               <span>User</span>
             </a>
           </li>
           <li class="sidebar-menu-item">
-            <a href="{{ route('admin.settings') }}" class="sidebar-menu-link" id="menu-404" title="404 Page">
+            <a href="{{ route('admin.product.index')}}" class="sidebar-menu-link {{ request()->routeIs('admin.product.*') ? 'active' : '' }}" id="menu-loginpage" title="Login Page">
+              <i class="bi bi-people"></i>
+              <span>Product</span>
+            </a>
+          </li>
+          <li class="sidebar-menu-item">
+            <a href="{{ route('admin.settings') }}" class="sidebar-menu-link {{ request()->routeIs('admin.settings') ? 'active' : '' }}" id="menu-404" title="404 Page">
               <i class="bi bi-gear"></i>
               <span>Pengaturan</span>
             </a>

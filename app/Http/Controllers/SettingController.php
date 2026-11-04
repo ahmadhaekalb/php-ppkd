@@ -37,6 +37,7 @@ class SettingController extends Controller
 
         if ($request->hasFile('site_logo')) {
             $setting = Setting::where('key', 'site_logo')->first();
+            
             if ($setting && $setting->value) {
                 Storage::disk('public')->delete($setting->value);
             }
